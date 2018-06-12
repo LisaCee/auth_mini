@@ -4,15 +4,15 @@ const User = require('./User');
 
 const router = express.Router();
 
-router.get('/', (req, res) => {
-    User.find()
-        .then(users => {
-            res.status(200).json(users)
-        })
-        .catch(err => {
-            res.status(500).json(err);
-        })
-})
+// router.get('/', (req, res) => {
+//     User.find()
+//         .then(users => {
+//             res.status(200).json(users)
+//         })
+//         .catch(err => {
+//             res.status(500).json(err);
+//         })
+// })
 
 router.post('/', (req, res) => {
     const newUser = req.body;
